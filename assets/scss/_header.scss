@@ -1,0 +1,66 @@
+.header {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  display: flex;
+  width: 100%;
+  height: 220px;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  padding: 0px 60px;
+  z-index: 100;
+  img {
+    position: relative;
+  }
+
+  &:before {
+    content: '';
+    width: 900px;
+    height: 266px;
+    position: absolute;
+    right: 100%;
+    top: 100%;
+    background: url('../img/superprise.webp') no-repeat right center;
+    background-size: auto 100%;
+    transform: translate(460px, 0px);
+    z-index: 3;
+  }
+}
+
+.logo {
+  width: 278px;
+  z-index: 2;
+}
+
+.header__title {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: 800px;
+  padding: 40px 60px 30px 60px;
+  transform: translate(-6.5vw, 0%);
+  align-self: flex-start;
+  flex-shrink: 0;
+  z-index: 1;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    right: 0px;
+    top: 0px;
+    background: var(--yellow);
+    z-index: 0;
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 86px), calc(100% - 86px) 100%, 0 100%);
+  }
+}
+
+.peterochka {
+  width: 100px;
+  z-index: 2;
+}
