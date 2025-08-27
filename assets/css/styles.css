@@ -86,13 +86,18 @@ ol {
   top: 0px;
   display: flex;
   width: 100%;
-  height: 220px;
+  height: 180px;
   justify-content: space-between;
   align-items: center;
   align-content: center;
   gap: 20px;
   padding: 0px 60px;
   z-index: 100;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .header img {
   position: relative;
@@ -121,8 +126,8 @@ ol {
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 800px;
-  padding: 40px 60px 30px 60px;
+  width: 700px;
+  padding: 40px 80px 30px 60px;
   transform: translate(-6.5vw, 0%);
   align-self: flex-start;
   flex-shrink: 0;
@@ -166,11 +171,38 @@ ol {
   width: auto;
   flex-wrap: wrap;
   gap: 40px;
-  background: var(--yellow);
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding: 30px 0px 0px 40px;
+}
+.countdown:before {
+  content: "";
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background: var(--yellow);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  -webkit-clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%, 0 60px);
+          clip-path: polygon(60px 0, 100% 0, 100% 100%, 0 100%, 0 60px);
+}
+.countdown:after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  bottom: calc(100% - 1px);
+  background: url("../img/anchor.svg") no-repeat right bottom/contain;
+  width: 270px;
+  height: 170px;
+  z-index: 0;
 }
 .countdown .title {
   text-align: right;
+  position: relative;
 }
 .countdown ul {
   display: inline-flex;
@@ -225,7 +257,7 @@ ol {
 .background {
   position: absolute;
   width: calc(100% - 120px);
-  height: calc(100% - 290px);
+  height: calc(100% - 250px);
   left: 60px;
   bottom: 70px;
   background: var(--yellow) url("../img/bg.webp") no-repeat right center/cover;

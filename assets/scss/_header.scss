@@ -4,13 +4,15 @@
   top: 0px;
   display: flex;
   width: 100%;
-  height: 220px;
+  height: 180px;
   justify-content: space-between;
   align-items: center;
   align-content: center;
   gap: 20px;
   padding: 0px 60px;
   z-index: 100;
+  pointer-events: none;
+  user-select: none;
   img {
     position: relative;
   }
@@ -40,8 +42,8 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 800px;
-  padding: 40px 60px 30px 60px;
+  width: 700px;
+  padding: 40px 80px 30px 60px;
   transform: translate(-6.5vw, 0%);
   align-self: flex-start;
   flex-shrink: 0;
