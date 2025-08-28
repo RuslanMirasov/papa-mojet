@@ -29,8 +29,8 @@
     gap: 8px;
     padding: 0px myclamp(20px, 60px, 1920px, 1920px);
     margin: 0 auto;
-    @media (max-width: 1365px) {
-      max-width: myclamp(1280px, 1600px, 1920px, 1920px);
+    @media (max-width: 1439px) {
+      max-width: 1160px;
     }
     &:before {
       content: '';
@@ -45,11 +45,33 @@
       z-index: 3;
     }
   }
+
+  @media (orientation: portrait) {
+    @media (max-width: 767px) {
+      background: var(--yellow);
+      height: auto;
+      .header__content {
+        min-width: 100%;
+        height: auto;
+        justify-content: flex-end;
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        &:before {
+          transform: translate(myclamp(184px, 460px, 1920px, 1920px), -40px);
+        }
+      }
+    }
+  }
 }
 
 .logo {
   width: myclamp(118px, 278px, 1920px, 1920px);
   z-index: 2;
+  @media (orientation: portrait) {
+    @media (max-width: 767px) {
+      order: 1;
+    }
+  }
 }
 
 .header__title {
@@ -84,9 +106,28 @@
       0 100%
     );
   }
+
+  @media (orientation: portrait) {
+    @media (max-width: 767px) {
+      padding-right: 0;
+      width: 100%;
+      max-width: 400px;
+      order: 2;
+      margin-top: -50px;
+      padding-bottom: 10px;
+      &:before {
+        content: none;
+      }
+    }
+  }
 }
 
 .peterochka {
   width: myclamp(44px, 100px, 1920px, 1920px);
   z-index: 2;
+  @media (orientation: portrait) {
+    @media (max-width: 767px) {
+      order: 1;
+    }
+  }
 }
