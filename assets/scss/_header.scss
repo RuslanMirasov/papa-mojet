@@ -1,38 +1,54 @@
 .header {
-  position: fixed;
+  position: absolute;
   left: 0px;
   top: 0px;
   display: flex;
   width: 100%;
-  height: 180px;
+  height: myclamp(50px, 150px, 1920px, 1920px);
   justify-content: space-between;
   align-items: center;
   align-content: center;
   gap: 20px;
-  padding: 0px 60px;
   z-index: 100;
-  pointer-events: none;
-  user-select: none;
+  // pointer-events: none;
+  // user-select: none;
   img {
     position: relative;
   }
 
-  &:before {
-    content: '';
-    width: 900px;
-    height: 266px;
-    position: absolute;
-    right: 100%;
-    top: 100%;
-    background: url('../img/superprise.webp') no-repeat right center;
-    background-size: auto 100%;
-    transform: translate(460px, 0px);
-    z-index: 3;
+  .header__content {
+    position: relative;
+    display: flex;
+    width: 100%;
+    min-width: 85%;
+    max-width: 1600px;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    gap: 8px;
+    padding: 0px myclamp(20px, 60px, 1920px, 1920px);
+    margin: 0 auto;
+    @media (max-width: 1365px) {
+      max-width: myclamp(1280px, 1600px, 1920px, 1920px);
+    }
+    &:before {
+      content: '';
+      width: 900px;
+      height: myclamp(120px, 266px, 1920px, 1920px);
+      position: absolute;
+      right: 100%;
+      top: 100%;
+      background: url('../img/superprise.webp') no-repeat right center;
+      background-size: auto 100%;
+      transform: translate(myclamp(184px, 460px, 1920px, 1920px), 0px);
+      z-index: 3;
+    }
   }
 }
 
 .logo {
-  width: 278px;
+  width: myclamp(118px, 278px, 1920px, 1920px);
   z-index: 2;
 }
 
@@ -42,9 +58,11 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  width: 700px;
-  padding: 40px 80px 30px 60px;
-  transform: translate(-6.5vw, 0%);
+  width: myclamp(250px, 640px, 1920px, 1920px);
+  padding-top: myclamp(20px, 20px, 1920px, 1920px);
+  padding-right: myclamp(60px, 90px, 1920px, 1920px);
+  padding-bottom: myclamp(15px, 30px, 1920px, 1920px);
+  padding-left: 0;
   align-self: flex-start;
   flex-shrink: 0;
   z-index: 1;
@@ -58,11 +76,17 @@
     top: 0px;
     background: var(--yellow);
     z-index: 0;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 86px), calc(100% - 86px) 100%, 0 100%);
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% calc(100% - myclamp(65px, 100px, 1920px, 1920px)),
+      calc(100% - myclamp(65px, 100px, 1920px, 1920px)) 100%,
+      0 100%
+    );
   }
 }
 
 .peterochka {
-  width: 100px;
+  width: myclamp(44px, 100px, 1920px, 1920px);
   z-index: 2;
 }
