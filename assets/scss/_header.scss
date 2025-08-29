@@ -10,8 +10,8 @@
   align-content: center;
   gap: 20px;
   z-index: 100;
-  // pointer-events: none;
-  // user-select: none;
+  pointer-events: none;
+  user-select: none;
   img {
     position: relative;
   }
@@ -35,7 +35,7 @@
     &:before {
       content: '';
       width: 900px;
-      height: myclamp(120px, 266px, 1920px, 1920px);
+      height: myclamp(110px, 266px, 1920px, 1920px);
       position: absolute;
       right: 100%;
       top: 100%;
@@ -57,7 +57,7 @@
         padding: 15px 20px;
         flex-wrap: wrap;
         &:before {
-          transform: translate(myclamp(184px, 460px, 1920px, 1920px), -40px);
+          transform: translate(myclamp(168px, 460px, 1920px, 1920px), -36px);
         }
       }
     }

@@ -91,6 +91,11 @@ ol {
   align-content: center;
   gap: 20px;
   z-index: 100;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .header img {
   position: relative;
@@ -117,7 +122,7 @@ ol {
 .header .header__content:before {
   content: "";
   width: 900px;
-  height: clamp(120px, 13.8542vw, 266px);
+  height: clamp(110px, 13.8542vw, 266px);
   position: absolute;
   right: 100%;
   top: 100%;
@@ -139,7 +144,7 @@ ol {
     flex-wrap: wrap;
   }
   .header .header__content:before {
-    transform: translate(clamp(184px, 23.9583vw, 460px), -40px);
+    transform: translate(clamp(168px, 23.9583vw, 460px), -36px);
   }
 }
 

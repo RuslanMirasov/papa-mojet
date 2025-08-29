@@ -36,7 +36,10 @@
     <header class="header">
       <div class="header__content">
         <img src="./assets/img/logo.svg" alt="Папа может" class="logo" />
-        <div class="header__title"><img src="./assets/img/header__title.webp" alt="Папа может" /></div>
+        <picture class="header__title">
+          <source srcset="./assets/img/header__title-mobil.webp" media="(max-width: 767px)" />
+          <img src="./assets/img/header__title.webp" alt="Папа может" />
+        </picture>
         <img src="./assets/img/peterochka.webp" alt="Папа может" class="peterochka" />
       </div>
     </header>
