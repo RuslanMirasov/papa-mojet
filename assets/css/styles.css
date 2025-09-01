@@ -1,5 +1,6 @@
 :root {
   --bold: "pfdintextcomppro-boldital", sans-serif;
+  --bold-normal: "pfdintextcomppro-bold", sans-serif;
   --medium: "pfdintextcomppro-medium", sans-serif;
   --yellow: #ffcf01;
   --color: #8a2432;
@@ -9,6 +10,12 @@
 @font-face {
   font-family: "pfdintextcomppro-boldital";
   src: url("../fonts/pfdintextcomppro-boldital.woff2") format("woff2"), url("../fonts/pfdintextcomppro-boldital.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "pfdintextcomppro-bold";
+  src: url("../fonts/pfdintextcomppro-bold.woff2") format("woff2"), url("../fonts/pfdintextcomppro-bold.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -149,7 +156,7 @@ ol {
 }
 
 .logo {
-  width: clamp(118px, 14.4792vw, 278px);
+  width: clamp(98px, 14.4792vw, 278px);
   z-index: 2;
 }
 @media (orientation: portrait) and (max-width: 767px) {
@@ -279,8 +286,17 @@ ol {
   height: clamp(70px, 8.8542vw, 170px);
   z-index: 0;
 }
-@media (orientation: portrait) and (max-width: 767px) {
+@media (max-width: 767px) {
   .countdown:after {
+    content: "13.10 - 7.12.2025";
+    color: #000;
+    text-align: center;
+    font-family: var(--bold-normal);
+    font-weight: bold;
+    letter-spacing: -0.06em;
+    padding-top: 10px;
+    padding-left: 24px;
+    font-size: 18px;
     right: -2px;
     bottom: 0px;
     height: calc(100% + 30px);

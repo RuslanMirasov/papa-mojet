@@ -65,7 +65,7 @@
 }
 
 .logo {
-  width: myclamp(118px, 278px, 1920px, 1920px);
+  width: myclamp(98px, 278px, 1920px, 1920px);
   z-index: 2;
   @media (orientation: portrait) {
     @media (max-width: 767px) {

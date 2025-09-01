@@ -1,15 +1,20 @@
 @font-face {
-  font-family: "pfdintextcomppro-boldital";
-  src: url("../fonts/pfdintextcomppro-boldital.woff2") format("woff2"),
-    url("../fonts/pfdintextcomppro-boldital.woff") format("woff");
+  font-family: 'pfdintextcomppro-boldital';
+  src: url('../fonts/pfdintextcomppro-boldital.woff2') format('woff2'), url('../fonts/pfdintextcomppro-boldital.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "pfdintextcomppro-medium";
-  src: url("../fonts/pfdintextcomppro-medium.woff2") format("woff2"),
-    url("../fonts/pfdintextcomppro-medium.woff") format("woff");
+  font-family: 'pfdintextcomppro-bold';
+  src: url('../fonts/pfdintextcomppro-bold.woff2') format('woff2'), url('../fonts/pfdintextcomppro-bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'pfdintextcomppro-medium';
+  src: url('../fonts/pfdintextcomppro-medium.woff2') format('woff2'), url('../fonts/pfdintextcomppro-medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
