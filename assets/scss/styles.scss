@@ -25,6 +25,7 @@
   left: myclamp(10px, 60px, 1920px, 1920px);
   bottom: myclamp(10px, 50px, 1920px, 1920px);
   background: var(--yellow) url('../img/bg.webp') no-repeat right center/cover;
+  pointer-events: none;
 
   @media (orientation: portrait) {
     background: var(--yellow) url('../img/bg-mobil.webp') no-repeat center bottom;

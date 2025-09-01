@@ -242,9 +242,7 @@ ol {
   display: inline-flex;
   position: relative;
   width: auto;
-  flex-wrap: wrap;
   gap: clamp(8px, 2.0833vw, 40px);
-  pointer-events: none;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -253,6 +251,7 @@ ol {
   padding-left: clamp(26px, 2.0833vw, 40px);
   padding-right: 1px;
   left: 1px;
+  align-items: center;
 }
 @media (orientation: portrait) and (max-width: 767px) {
   .countdown {
@@ -273,6 +272,7 @@ ol {
   width: 100%;
   height: 100%;
   z-index: 0;
+  pointer-events: none;
   -webkit-clip-path: polygon(clamp(20px, 3.125vw, 60px) 0, 100% 0, 100% 100%, 0 100%, 0 clamp(20px, 3.125vw, 60px));
           clip-path: polygon(clamp(20px, 3.125vw, 60px) 0, 100% 0, 100% 100%, 0 100%, 0 clamp(20px, 3.125vw, 60px));
 }
@@ -310,6 +310,11 @@ ol {
   text-align: right;
   position: relative;
 }
+@media (orientation: portrait) and (max-width: 767px) {
+  .countdown .title {
+    padding-bottom: 6px;
+  }
+}
 .countdown ul {
   display: inline-flex;
   align-items: flex-start;
@@ -324,9 +329,8 @@ ol {
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: clamp(2px, 0.3125vw, 6px);
 }
-.countdown ul li span {
+.countdown ul li div {
   display: flex;
   position: relative;
   flex-wrap: wrap;
@@ -338,17 +342,27 @@ ol {
   border-radius: clamp(4px, 0.8333vw, 16px);
   background: linear-gradient(#a11f2f 0%, #a11f2f calc(50% - 1px), #7d1421 calc(50% + 1px), #7d1421 100%);
   flex-shrink: 0;
-  font-size: clamp(32px, 5.2083vw, 100px);
-  color: #fff;
-  line-height: 1;
   z-index: 1;
 }
-@media (orientation: portrait) and (max-width: 767px) {
-  .countdown ul li span {
+.countdown ul li div span {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: clamp(32px, 5.2083vw, 100px);
+  line-height: 1;
+  color: #fff;
+}
+@media (max-width: 767px) {
+  .countdown ul li div {
     padding-top: 4px;
   }
 }
-.countdown ul li span:before {
+@media (hover: none) {
+  .countdown ul li div {
+    padding-top: clamp(4px, 1.0417vw, 20px);
+  }
+}
+.countdown ul li div:before {
   content: "";
   z-index: 2;
   width: 100%;
@@ -361,6 +375,7 @@ ol {
   text-align: center;
   text-transform: uppercase;
   font-size: clamp(10px, 1.7708vw, 34px);
+  padding-top: clamp(2px, 0.3125vw, 6px);
 }
 
 .title {
@@ -375,6 +390,7 @@ ol {
   left: clamp(10px, 3.125vw, 60px);
   bottom: clamp(10px, 2.6042vw, 50px);
   background: var(--yellow) url("../img/bg.webp") no-repeat right center/cover;
+  pointer-events: none;
 }
 @media (orientation: portrait) {
   .background {

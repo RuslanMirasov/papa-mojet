@@ -23,14 +23,14 @@
   display: inline-flex;
   position: relative;
   width: auto;
-  flex-wrap: wrap;
+  //flex-wrap: wrap;
   gap: myclamp(8px, 40px, 1920px, 1920px);
-  pointer-events: none;
   user-select: none;
   padding-top: myclamp(20px, 30px, 1920px, 1920px);
   padding-left: myclamp(26px, 40px, 1920px, 1920px);
   padding-right: 1px;
   left: 1px;
+  align-items: center;
 
   @media (orientation: portrait) {
     @media (max-width: 767px) {
@@ -52,6 +52,7 @@
     width: 100%;
     height: 100%;
     z-index: 0;
+    pointer-events: none;
     clip-path: polygon(myclamp(20px, 60px, 1920px, 1920px) 0, 100% 0, 100% 100%, 0 100%, 0 myclamp(20px, 60px, 1920px, 1920px));
   }
 
@@ -87,6 +88,11 @@
   .title {
     text-align: right;
     position: relative;
+    @media (orientation: portrait) {
+      @media (max-width: 767px) {
+        padding-bottom: 6px;
+      }
+    }
   }
 
   ul {
@@ -103,9 +109,8 @@
       justify-content: center;
       align-items: center;
       align-content: center;
-      gap: myclamp(2px, 6px, 1920px, 1920px);
 
-      span {
+      div {
         display: flex;
         position: relative;
         flex-wrap: wrap;
@@ -117,14 +122,22 @@
         border-radius: myclamp(4px, 16px, 1920px, 1920px);
         background: linear-gradient(#a11f2f 0%, #a11f2f calc(50% - 1px), #7d1421 calc(50% + 1px), #7d1421 100%);
         flex-shrink: 0;
-        font-size: myclamp(32px, 100px, 1920px, 1920px);
-        color: #fff;
-        line-height: 1;
         z-index: 1;
-        @media (orientation: portrait) {
-          @media (max-width: 767px) {
-            padding-top: 4px;
-          }
+        span {
+          display: block;
+          width: 100%;
+          text-align: center;
+          font-size: myclamp(32px, 100px, 1920px, 1920px);
+          line-height: 1;
+          color: #fff;
+        }
+
+        @media (max-width: 767px) {
+          padding-top: 4px;
+        }
+
+        @media (hover: none) {
+          padding-top: myclamp(4px, 20px, 1920px, 1920px);
         }
 
         &:before {
@@ -142,6 +155,7 @@
         text-align: center;
         text-transform: uppercase;
         font-size: myclamp(10px, 34px, 1920px, 1920px);
+        padding-top: myclamp(2px, 6px, 1920px, 1920px);
       }
     }
   }
