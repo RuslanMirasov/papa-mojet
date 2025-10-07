@@ -142,6 +142,7 @@ ol {
   .header {
     background: var(--yellow);
     height: auto;
+    padding-top: 10px;
   }
   .header .header__content {
     min-width: 100%;
@@ -213,6 +214,39 @@ ol {
 @media (orientation: portrait) and (max-width: 767px) {
   .peterochka {
     order: 1;
+  }
+}
+
+.rules {
+  position: absolute;
+  left: 50%;
+  transform: translate(21vw, 0%);
+  font-size: clamp(18px, 1.6667vw, 32px);
+  text-decoration: none;
+  color: #3a5689;
+  color: var(--color);
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 2;
+  pointer-events: all;
+  z-index: 100;
+}
+@media (hover: hover) {
+  .rules:hover {
+    color: var(--color);
+    border-bottom: 3px solid var(--color);
+  }
+}
+@media (max-width: 667px) {
+  .rules {
+    transform: translate(0%, 0%);
+    left: 10px;
+    top: 0px;
+    color: #fff;
+    background: var(--color);
+    border: none;
+    padding: 4px 10px 6px 10px;
   }
 }
 

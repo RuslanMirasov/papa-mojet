@@ -50,6 +50,7 @@
     @media (max-width: 767px) {
       background: var(--yellow);
       height: auto;
+      padding-top: 10px;
       .header__content {
         min-width: 100%;
         height: auto;
@@ -129,5 +130,37 @@
     @media (max-width: 767px) {
       order: 1;
     }
+  }
+}
+
+.rules {
+  position: absolute;
+  left: 50%;
+  transform: translate(21vw, 0%);
+  font-size: myclamp(18px, 32px, 1920px, 1920px);
+  text-decoration: none;
+  color: #3a5689;
+  color: var(--color);
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+  transition: 0.3s;
+  cursor: pointer;
+  z-index: 2;
+  pointer-events: all;
+  z-index: 100;
+  @media (hover: hover) {
+    &:hover {
+      color: var(--color);
+      border-bottom: 3px solid var(--color);
+    }
+  }
+
+  @media (max-width: 667px) {
+    transform: translate(0%, 0%);
+    left: 10px;
+    top: 0px;
+    color: #fff;
+    background: var(--color);
+    border: none;
+    padding: 4px 10px 6px 10px;
   }
 }
