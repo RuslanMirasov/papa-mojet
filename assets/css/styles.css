@@ -226,7 +226,7 @@ ol {
   color: #3a5689;
   color: var(--color);
   border-bottom: 3px solid rgba(0, 0, 0, 0);
-  transition: 0.3s;
+  transition: border-bottom 0.3s;
   cursor: pointer;
   z-index: 2;
   pointer-events: all;
@@ -238,15 +238,13 @@ ol {
     border-bottom: 3px solid var(--color);
   }
 }
-@media (max-width: 667px) {
+@media (max-width: 666px) {
   .rules {
     transform: translate(0%, 0%);
     left: 10px;
-    top: 0px;
-    color: #fff;
-    background: var(--color);
+    top: 4px;
+    color: var(--color);
     border: none;
-    padding: 6px 10px 4px 10px;
   }
 }
 
